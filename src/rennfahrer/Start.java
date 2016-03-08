@@ -1,9 +1,5 @@
 package rennfahrer;
 
-import java.sql.SQLException;
-
-import db.conn.MyConnection;
-
 public class Start {
 
 	public static void main(String[] args) {

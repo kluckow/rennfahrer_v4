@@ -298,7 +298,7 @@ public class GuiRennwagen extends Frame {
 		this.tf_maxtankinhalt.setText(Float.toString(rennwagen.getMaxtankinhalt()));
 		this.tf_isttankinhalt.setText(Float.toString(rennwagen.getIsttankinhalt()));
 
-		sortListByIndex();
+//		sortListByIndex();
 		
 		this.setVisible(true);
 	}
