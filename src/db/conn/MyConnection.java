@@ -36,6 +36,7 @@ public class MyConnection {
 	 * Instantiates a new my connection.
 	 */
 	public MyConnection() {
+		
 		try {
 			
 //			initialize con

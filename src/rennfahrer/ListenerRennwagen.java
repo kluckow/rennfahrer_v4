@@ -20,7 +20,7 @@ implements ActionListener, MouseListener
 	private GuiRennwagen      guirennwagen;
 	
 	/** The vectorrennwagen. */
-	private Vector<Rennwagen> vectorrennwagen = new Vector<Rennwagen>();
+//	private Vector<Rennwagen> vectorrennwagen = new Vector<Rennwagen>();
 
 	/**
 	 * Instantiates a new listener rennwagen.
@@ -63,7 +63,7 @@ implements ActionListener, MouseListener
 			
 			if (duplicate == false) {
 				
-				this.vectorrennwagen.add(rennwagen);	
+//				this.vectorrennwagen.add(rennwagen);	
 				rennwagen.createInDatabase();
 			}
 			
@@ -114,7 +114,7 @@ implements ActionListener, MouseListener
 			JList source = (JList) e.getSource();
 			index = source.locationToIndex(e.getPoint()); 
 //			guirennwagen.zeigeRennwagendaten(((Rennwagen) source.getSelectedValue()));
-			System.out.println("Index " + index + " wurde ausgew�hlt");
+			System.out.println("Index " + index + " wurde ausgewählt");
 		}
 		
 	}

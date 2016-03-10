@@ -132,10 +132,10 @@ public class GuiRennwagen extends Frame {
 		this.tf_leistung = new TextField(30);
 		this.la_hubraum = new Label("Hubraum");
 		this.tf_hubraum = new TextField(30);
-		this.la_maxtankinhalt = new Label("maixmaler Tankinhalt");
-		this.tf_maxtankinhalt = new TextField(30);
 		this.la_isttankinhalt = new Label("aktueller Tankinhalt");
 		this.tf_isttankinhalt = new TextField(30);
+		this.la_maxtankinhalt = new Label("maixmaler Tankinhalt");
+		this.tf_maxtankinhalt = new TextField(30);
 		this.bu_ok = new Button("OK");
 		this.bu_ende = new Button("Ende");
 		this.bu_aendern = new Button("Aendern");
@@ -157,10 +157,10 @@ public class GuiRennwagen extends Frame {
 		this.pa_mitte.add(tf_leistung);
 		this.pa_mitte.add(la_hubraum);
 		this.pa_mitte.add(tf_hubraum);
-		this.pa_mitte.add(la_maxtankinhalt);
-		this.pa_mitte.add(tf_maxtankinhalt);
 		this.pa_mitte.add(la_isttankinhalt);
 		this.pa_mitte.add(tf_isttankinhalt);
+		this.pa_mitte.add(la_maxtankinhalt);
+		this.pa_mitte.add(tf_maxtankinhalt);
 		this.pa_mitte.add(bu_ende);
 		this.pa_mitte.add(bu_ok);
 		this.pa_mitte.add(bu_aendern);
@@ -197,7 +197,7 @@ public class GuiRennwagen extends Frame {
 	public Rennwagen liesRennwagendaten(Rennwagen rennwagen) {
 		rennwagen.update(Long.parseLong(this.tf_rennwagenid.getText()), this.tf_modell.getText(), this.tf_hersteller.getText(),
 				Integer.parseInt(this.tf_leistung.getText()), Integer.parseInt(this.tf_hubraum.getText()),
-				Float.parseFloat(this.tf_maxtankinhalt.getText()), Float.parseFloat(this.tf_maxtankinhalt.getText()));
+				Float.parseFloat(this.tf_isttankinhalt.getText()), Float.parseFloat(this.tf_maxtankinhalt.getText()));
 
 		return rennwagen;
 	}
@@ -295,11 +295,9 @@ public class GuiRennwagen extends Frame {
 		this.tf_hersteller.setText(rennwagen.getHersteller());
 		this.tf_leistung.setText(Integer.toString(rennwagen.getLeistung()));
 		this.tf_hubraum.setText(Integer.toString(rennwagen.getHubraum()));
-		this.tf_maxtankinhalt.setText(Float.toString(rennwagen.getMaxtankinhalt()));
 		this.tf_isttankinhalt.setText(Float.toString(rennwagen.getIsttankinhalt()));
+		this.tf_maxtankinhalt.setText(Float.toString(rennwagen.getMaxtankinhalt()));
 
-//		sortListByIndex();
-		
 		this.setVisible(true);
 	}
 
@@ -311,7 +309,7 @@ public class GuiRennwagen extends Frame {
 	public void removeRennwagenFromList(Rennwagen rennwagen) {
 		
 		for (int i = 0; i < defaultlistmodel.size(); i++) {
-			if (( (Rennwagen) defaultlistmodel.getElementAt(i)).getId().equals(rennwagen.getId())) {
+			if ( ((String) defaultlistmodel.getElementAt(i)).startsWith(String.valueOf(rennwagen.getId()) + " ") ) {
 				defaultlistmodel.remove(i);
 			}
 		}
