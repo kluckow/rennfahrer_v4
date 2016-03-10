@@ -7,7 +7,7 @@ import java.util.Vector;
 
 import javax.swing.JList;
 
-import db.bean.Rennwagen;
+import db.entity.Rennwagen;
 
 /**
  * The Class ListenerRennwagen.

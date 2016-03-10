@@ -18,8 +18,8 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 
-import db.bean.Rennwagen;
 import db.conn.MyConnection;
+import db.entity.Rennwagen;
 
 /**
  * The Class GuiRennwagen.

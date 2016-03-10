@@ -1,4 +1,4 @@
-package db.bean;
+package db.entity;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
